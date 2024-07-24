@@ -1,7 +1,7 @@
 import socket
 
-HOST = "www.google.com"
-PORT = 80
+HOST = "127.0.0.1"
+PORT = 9998
 
 #made socket object
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -17,3 +17,5 @@ responce = client.recv(4096)
 
 print(responce.decode('utf-8'))
 client.close()
+
+#nc -nlvp 9998
