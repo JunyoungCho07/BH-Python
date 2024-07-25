@@ -22,6 +22,7 @@ def handle_client(client_socket):
         request = sock.recv(1024) #receive data
         print(f'[*] Received: {request.decode("utf-8")}') #print it
         sock.send(b'ACKKK') #send data to client
+        # sock.send(b'I have successfuly received your data')
 
 
 if __name__ == '__main__':
