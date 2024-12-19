@@ -21,8 +21,8 @@ def handle_client(client_socket):
     with client_socket as sock: #what is this code doing?? I guess client_socket -> sock
         request = sock.recv(1024) #receive data
         print(f'[*] Received: {request.decode("utf-8")}') #print it
-        sock.send(b'ACKKK') #send data to client
-        # sock.send(b'I have successfuly received your data')
+        # sock.send(b'ACKKK') #send data to client
+        sock.send(b'I have successfuly received your data\n test succeded')
 
 
 if __name__ == '__main__':
